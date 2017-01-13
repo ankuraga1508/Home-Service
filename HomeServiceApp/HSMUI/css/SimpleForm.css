@@ -1,0 +1,22 @@
+input, .inputGroup {
+  float: right;
+}
+
+.radio {
+  float:none;
+}
+
+#fields {
+  display: block;
+  width: 650px;
+  padding-bottom: 15px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+    margin: 15px;
+    font-size: 1.5em;
+}

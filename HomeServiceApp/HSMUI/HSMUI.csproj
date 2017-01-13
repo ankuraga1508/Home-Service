@@ -1,0 +1,521 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{85A0FA73-4B44-4F2A-9763-13AB59140F3D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BestDealsMVC</RootNamespace>
+    <AssemblyName>BestDealsMVC</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.2.0\lib\20\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.2.0\lib\20\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.2.0\lib\20\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.2.0\lib\20\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.2.0\lib\20\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Abstractions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Transactions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.20710.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminRejectedRequests.aspx" />
+    <Content Include="AdminCompletedRequests.aspx" />
+    <Content Include="css\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="css\scheduleServiceModal.css" />
+    <Content Include="css\seniorDashboard.css" />
+    <Content Include="css\registration.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="js\logout.js" />
+    <Content Include="js\manageCaregiver.js" />
+    <Content Include="js\scheduleServiceModal.js" />
+    <Content Include="js\seniorCompletedRequests.js" />
+    <Content Include="js\seniorRejectedRequests.js" />
+    <Content Include="js\seniorActiveRequests.js" />
+    <Content Include="js\seniorDashboard.js" />
+    <Content Include="js\signinCheck.js" />
+    <Content Include="ManageCaregiver.aspx" />
+    <Content Include="SeniorCompletedRequests.aspx" />
+    <Content Include="SeniorRejectedRequests.aspx" />
+    <Content Include="SeniorActiveRequests.aspx" />
+    <Content Include="SeniorDashboard.aspx" />
+    <Content Include="css\assignRequest.css" />
+    <Content Include="css\images\ui-icons_555555_256x240.png" />
+    <Content Include="css\images\ui-icons_777620_256x240.png" />
+    <Content Include="css\images\ui-icons_777777_256x240.png" />
+    <Content Include="css\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="css\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="css\jsgrid-theme.min.css" />
+    <Content Include="css\jsgrid.min.css" />
+    <Content Include="css\showRequests.css" />
+    <Content Include="images\favicon.jpg" />
+    <Content Include="images\login_bg.jpg" />
+    <Content Include="css\images\ui-icons_444444_256x240.png" />
+    <Content Include="js\adminDashboardController.js" />
+    <Content Include="css\jquery-ui.min.css" />
+    <Content Include="js\jquery-ui.min.js" />
+    <Content Include="js\caregiverDashboardController.js" />
+    <Content Include="js\jsgrid.core.js" />
+    <Content Include="js\jsgrid.field.checkbox.js" />
+    <Content Include="js\jsgrid.field.control.js" />
+    <Content Include="js\jsgrid.field.js" />
+    <Content Include="js\jsgrid.field.number.js" />
+    <Content Include="js\jsgrid.field.select.js" />
+    <Content Include="js\jsgrid.field.text.js" />
+    <Content Include="js\jsgrid.field.textarea.js" />
+    <Content Include="js\jsgrid.load-indicator.js" />
+    <Content Include="js\jsgrid.load-strategies.js" />
+    <Content Include="js\jsgrid.sort-strategies.js" />
+    <Content Include="js\jsgrid.validation.js" />
+    <Content Include="Registration.aspx" />
+    <Content Include="CaregiverDashboard.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="AdminDashboard.aspx" />
+    <Content Include="AddService.aspx" />
+    <Content Include="ManageService.aspx" />
+    <Content Include="AddCaregiver.aspx" />
+    <Content Include="assets\brand\bootstrap-outline.svg" />
+    <Content Include="assets\brand\bootstrap-punchout.svg" />
+    <Content Include="assets\brand\bootstrap-solid.svg" />
+    <Content Include="assets\css\docs.min.css" />
+    <Content Include="assets\css\ie10-viewport-bug-workaround.css" />
+    <Content Include="assets\css\src\docs.css" />
+    <Content Include="assets\css\src\pygments-manni.css" />
+    <Content Include="assets\flash\ZeroClipboard.swf" />
+    <Content Include="assets\img\components.png" />
+    <Content Include="assets\img\devices.png" />
+    <Content Include="assets\img\expo-lyft.jpg" />
+    <Content Include="assets\img\expo-newsweek.jpg" />
+    <Content Include="assets\img\expo-riot.jpg" />
+    <Content Include="assets\img\expo-vogue.jpg" />
+    <Content Include="assets\img\sass-less.png" />
+    <Content Include="assets\js\customize.min.js" />
+    <Content Include="assets\js\docs.min.js" />
+    <Content Include="assets\js\ie-emulation-modes-warning.js" />
+    <Content Include="assets\js\ie10-viewport-bug-workaround.js" />
+    <Content Include="assets\js\ie8-responsive-file-warning.js" />
+    <Content Include="assets\js\raw-files.min.js" />
+    <Content Include="assets\js\src\application.js" />
+    <Content Include="assets\js\src\customizer.js" />
+    <Content Include="assets\js\vendor\anchor.min.js" />
+    <Content Include="assets\js\vendor\autoprefixer.js" />
+    <Content Include="assets\js\vendor\Blob.js" />
+    <Content Include="assets\js\vendor\FileSaver.js" />
+    <Content Include="assets\js\vendor\holder.min.js" />
+    <Content Include="assets\js\vendor\jquery.min.js" />
+    <Content Include="assets\js\vendor\jszip.min.js" />
+    <Content Include="assets\js\vendor\less.min.js" />
+    <Content Include="assets\js\vendor\uglify.min.js" />
+    <Content Include="assets\js\vendor\ZeroClipboard.min.js" />
+    <Content Include="css\adminStyle.css" />
+    <Content Include="css\animations.css" />
+    <Content Include="css\bootstrap-rtl.min.css" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\fonts\fontawesome-webfont.svg" />
+    <Content Include="css\ie.css" />
+    <Content Include="css\ie8.css" />
+    <Content Include="css\rtl.css" />
+    <Content Include="css\signin.css" />
+    <Content Include="css\SimpleForm.css" />
+    <Content Include="css\style.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Includes\globalscript.aspx" />
+    <Content Include="Includes\footer.aspx" />
+    <Content Include="Includes\header.aspx" />
+    <Content Include="js\addCaregiver.js" />
+    <Content Include="js\addService.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\editProfile.js" />
+    <Content Include="js\feedback.js" />
+    <Content Include="js\helper-plugins.js" />
+    <Content Include="js\init.js" />
+    <Content Include="js\jquery-2.0.0.min.js" />
+    <Content Include="js\jsgrid-1.5.2\css\icons-2x.png" />
+    <Content Include="js\jsgrid-1.5.2\css\icons.png" />
+    <Content Include="js\jsgrid-1.5.2\css\jsgrid.css" />
+    <Content Include="js\jsgrid-1.5.2\css\theme.css" />
+    <Content Include="js\jsgrid-1.5.2\demos\basic.html" />
+    <Content Include="js\jsgrid-1.5.2\demos\batch-delete.html" />
+    <Content Include="js\jsgrid-1.5.2\demos\custom-grid-field.html" />
+    <Content Include="js\jsgrid-1.5.2\demos\custom-load-indicator.html" />
+    <Content Include="js\jsgrid-1.5.2\demos\custom-row-renderer.html" />
+    <Content Include="js\jsgrid-1.5.2\demos\custom-view.html" />
+    <Content Include="js\jsgrid-1.5.2\demos\data-manipulation.html" />
+    <Content Include="js\jsgrid-1.5.2\demos\db.js" />
+    <Content Include="js\jsgrid-1.5.2\demos\demos.css" />
+    <Content Include="js\jsgrid-1.5.2\demos\external-pager.html" />
+    <Content Include="js\jsgrid-1.5.2\demos\index.html" />
+    <Content Include="js\jsgrid-1.5.2\demos\loading-by-page.html" />
+    <Content Include="js\jsgrid-1.5.2\demos\localization.html" />
+    <Content Include="js\jsgrid-1.5.2\demos\odata-service.html" />
+    <Content Include="js\jsgrid-1.5.2\demos\rows-reordering.html" />
+    <Content Include="js\jsgrid-1.5.2\demos\sorting.html" />
+    <Content Include="js\jsgrid-1.5.2\demos\static-data.html" />
+    <Content Include="js\jsgrid-1.5.2\demos\validation.html" />
+    <Content Include="js\jsgrid-1.5.2\dist\jsgrid-theme.css" />
+    <Content Include="js\jsgrid-1.5.2\dist\jsgrid-theme.min.css" />
+    <Content Include="js\jsgrid-1.5.2\dist\jsgrid.css" />
+    <Content Include="js\jsgrid-1.5.2\dist\jsgrid.js" />
+    <Content Include="js\jsgrid-1.5.2\dist\jsgrid.min.css" />
+    <Content Include="js\jsgrid-1.5.2\dist\jsgrid.min.js" />
+    <Content Include="js\jsgrid-1.5.2\external\jquery\jquery-1.8.3.js" />
+    <Content Include="js\jsgrid-1.5.2\external\qunit\qunit-1.10.0.css" />
+    <Content Include="js\jsgrid-1.5.2\external\qunit\qunit-1.10.0.js" />
+    <Content Include="js\jsgrid-1.5.2\Gruntfile.js" />
+    <Content Include="js\jsgrid-1.5.2\src\fields\jsgrid.field.checkbox.js" />
+    <Content Include="js\jsgrid-1.5.2\src\fields\jsgrid.field.control.js" />
+    <Content Include="js\jsgrid-1.5.2\src\fields\jsgrid.field.number.js" />
+    <Content Include="js\jsgrid-1.5.2\src\fields\jsgrid.field.select.js" />
+    <Content Include="js\jsgrid-1.5.2\src\fields\jsgrid.field.text.js" />
+    <Content Include="js\jsgrid-1.5.2\src\fields\jsgrid.field.textarea.js" />
+    <Content Include="js\jsgrid-1.5.2\src\i18n\de.js" />
+    <Content Include="js\jsgrid-1.5.2\src\i18n\es.js" />
+    <Content Include="js\jsgrid-1.5.2\src\i18n\fr.js" />
+    <Content Include="js\jsgrid-1.5.2\src\i18n\he.js" />
+    <Content Include="js\jsgrid-1.5.2\src\i18n\ja.js" />
+    <Content Include="js\jsgrid-1.5.2\src\i18n\ka.js" />
+    <Content Include="js\jsgrid-1.5.2\src\i18n\pl.js" />
+    <Content Include="js\jsgrid-1.5.2\src\i18n\pt-br.js" />
+    <Content Include="js\jsgrid-1.5.2\src\i18n\pt.js" />
+    <Content Include="js\jsgrid-1.5.2\src\i18n\ru.js" />
+    <Content Include="js\jsgrid-1.5.2\src\i18n\tr.js" />
+    <Content Include="js\jsgrid-1.5.2\src\i18n\zh-cn.js" />
+    <Content Include="js\jsgrid-1.5.2\src\i18n\zh-tw.js" />
+    <Content Include="js\jsgrid-1.5.2\src\jsgrid.core.js" />
+    <Content Include="js\jsgrid-1.5.2\src\jsgrid.field.js" />
+    <Content Include="js\jsgrid-1.5.2\src\jsgrid.load-indicator.js" />
+    <Content Include="js\jsgrid-1.5.2\src\jsgrid.load-strategies.js" />
+    <Content Include="js\jsgrid-1.5.2\src\jsgrid.sort-strategies.js" />
+    <Content Include="js\jsgrid-1.5.2\src\jsgrid.validation.js" />
+    <Content Include="js\jsgrid-1.5.2\tests\index.html" />
+    <Content Include="js\jsgrid-1.5.2\tests\jsgrid.field.tests.js" />
+    <Content Include="js\jsgrid-1.5.2\tests\jsgrid.sort-strategies.tests.js" />
+    <Content Include="js\jsgrid-1.5.2\tests\jsgrid.tests.js" />
+    <Content Include="js\jsgrid-1.5.2\tests\jsgrid.validation.tests.js" />
+    <Content Include="js\knockout-3.3.0.js" />
+    <Content Include="js\manageService.js" />
+    <Content Include="js\modernizr.js" />
+    <Content Include="js\registration.js" />
+    <Content Include="js\requestService.js" />
+    <Content Include="js\script_ie.js" />
+    <Content Include="js\signin.js" />
+    <Content Include="js\updateCaregiver.js" />
+    <Content Include="js\UpdateServiceRequest.js" />
+    <Content Include="js\waypoints.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="plugins\" />
+    <Folder Include="Src\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BL\BL.csproj">
+      <Project>{057053b4-ee28-420f-9bdc-cb4a031c78ed}</Project>
+      <Name>BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{5bc5447e-8367-43a2-bc7a-cf87a71792e9}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{d768e6d7-ab28-45c6-9e87-9d5f6d4364ed}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{e5bc0691-678f-4b45-a740-4e84d63da9e3}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Interface\Interface.csproj">
+      <Project>{e97856ce-3d7e-45e2-a71f-a41af7159153}</Project>
+      <Name>Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{62962037-eac5-415b-827c-b7a9220e349a}</Project>
+      <Name>Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\.DS_Store" />
+    <Content Include="css\fonts\.DS_Store" />
+    <Content Include="css\fonts\fontawesome-webfont.eot" />
+    <Content Include="css\fonts\fontawesome-webfont.ttf" />
+    <Content Include="css\fonts\fontawesome-webfont.woff" />
+    <Content Include="css\fonts\FontAwesome.otf" />
+    <Content Include="js\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="js\jsgrid-1.5.2\.editorconfig" />
+    <Content Include="js\jsgrid-1.5.2\.gitignore" />
+    <Content Include="js\jsgrid-1.5.2\.npmignore" />
+    <Content Include="js\jsgrid-1.5.2\.travis.yml" />
+    <Content Include="js\jsgrid-1.5.2\bower.json" />
+    <Content Include="js\jsgrid-1.5.2\LICENSE" />
+    <Content Include="js\jsgrid-1.5.2\package.json" />
+    <Content Include="js\jsgrid-1.5.2\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\docs.min.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\bootstrap-theme.css.map" />
+    <Content Include="css\bootstrap-theme.min.css.map" />
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="css\bootstrap.min.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="json\db514_activeRequests.json" />
+    <Content Include="json\db514_availableCG.json" />
+    <Content Include="json\db514_availableServices.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="css\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="css\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="css\fonts\glyphicons-halflings-regular.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="json\db514_seniorActiveReq.json" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59600</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:62649/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

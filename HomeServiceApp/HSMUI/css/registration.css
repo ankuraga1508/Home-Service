@@ -1,0 +1,46 @@
+
+
+body {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	background: none;
+	color: #0d0d0d;
+    background-color: #333;
+}
+html {
+	//background-image: url("../images/login_bg.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 25px;
+}
+.form-signin .form-signin-heading{
+	margin-top: 50px;
+	text-align: center;
+}
+
+.form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.control-label {
+	font-size: 20px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
