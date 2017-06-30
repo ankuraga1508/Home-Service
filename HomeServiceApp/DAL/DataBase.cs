@@ -7,7 +7,8 @@ using System.Data;
 using MySql.Data.MySqlClient;
 using System.Web;
 using System.Threading;
-using HSM.Common; 
+using HSM.Common;
+using System;
 
 namespace HSM.DAL
 {
